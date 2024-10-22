@@ -23,7 +23,7 @@ def get_db_connection():
 
 def get_store_data():
     conn = get_db_connection()
-    query = "SELECT store_id, location_x, location_y, inventory, demand, brand, store_name, price_per_unit FROM croma_inventory_data;"
+    query = "SELECT store_id, location_x, location_y, inventory, demand, brand, store_name, price_per_unit FROM costco_inventory_data;"
     store_data = pd.read_sql(query, conn)
     conn.close()
     return store_data
